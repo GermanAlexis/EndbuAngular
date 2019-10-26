@@ -4,19 +4,22 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
-import { AuthComponent } from './Service/auth/auth.component';
+
+// ------------ Servicios ----------
+import { AuthService } from './Service/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    AuthComponent
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
