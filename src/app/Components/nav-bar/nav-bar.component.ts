@@ -3,15 +3,15 @@ import { AuthService } from '../../Service/auth.service';
 
 @Component({
   selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  templateUrl: './nav-bar.component.html'
 })
 export class NavBarComponent implements OnInit {
 
-  constructor( public auth: AuthService) { }
+  constructor( private auth: AuthService) { }
 
   ngOnInit() {
     this.auth.localAuthSetup();
+    this.auth.handleAuthCallback();
   }
    login() {
      this.auth.login();
