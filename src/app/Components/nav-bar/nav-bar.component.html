@@ -31,7 +31,7 @@
         
     </div>
             <div  >
-                    <button (click)="login()"  *ngIf="!auth.loggedIn" type="button" class="btn btn-dark">Ingresar</button>
+                    <button (click)="login()"   mat-raised-button="accent" *ngIf="!auth.loggedIn" type="button" class="btn btn-dark">Ingresar</button>
                     <button (click)="logout()" *ngIf="auth.loggedIn" type="button" class="btn btn-dark">Salir</button>
             </div>
             </div>
